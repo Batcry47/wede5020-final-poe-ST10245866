@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Rise &amp; Shine Bakery for inquiries, orders, and more. Find our contact details and business hours.">
+    <title>Rise &amp; Shine Bakery - Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="_images\page\logo.jpg" alt="Rise &amp; Shine Bakery Logo" width=”150” height=”150”>
+        <nav id="topnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li class="active"><span>Contact Us</span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <div>
+            <p>Thank you for your interest in Rise &amp; Shine Bakery.</p>
+            <p>You can reach us by phone at <a href="tel:+27119035555">011 903 5555</a>, or by email at <a
+                    href="mailto:info@riseandshinebakery.co.za">info@riseandshinebakery.co.za</a>.</p>
+            <p>Our address is:</p>
+            <p>689 Schoeman Street<br>
+                Pretoria<br>
+                South Africa<br>
+                0007</p>
+            <p>Our business hours are:</p>
+            <p>Monday-Friday: 7am-6pm<br>
+                Saturday: 8am-5pm<br>
+                Sunday: 8am-3pm</p>
+        </div>
+
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2091.025813428736!2d28.201975891861174!3d-25.748185058861875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95621e7a61547f%3A0xf3dce34cc25775d5!2s689%20Schoeman%20St%2C%20Arcadia%2C%20Pretoria%2C%200007%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1679240949646!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <form action="mailto:info@riseandshinebakery.co.za" method="post" class="form" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="Enter your name" onfocus="this.value=''">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="Enter your email" onfocus="this.value=''">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" value="Enter your phone number" onfocus="this.value=''">
+
+            <label for="enquiry">Enquiry:</label>
+            <select name="enquiry" id="enquiry">
+                <option value="0">Choose...</option>
+                <option value="1">General Inquiry</option>
+                <option value="2">Order Inquiry</option>
+                <option value="3">Product Information</option>
+                <option value="4">Custom Cake Order</option>
+                <option value="5">Bakery Services</option>
+                <option value="6">Suggestions</option>
+                <option value="7">Other</option>
+            </select>
+
+            <label for="details">Details:</label>
+            <textarea name="details" id="details" rows="4"></textarea>
+
+            <input type="submit" value="Submit" onclick="validateForm()">
+        </form>
+    </main>
+
+    <footer>
+        <nav id="bottomnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li class="active"><span>Contact Us</span></li>
+            </ul>
+        </nav>
+
+        <span>
+            &copy; 2023 Rise &amp; Shine Bakery. All rights reserved.
+        </span>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTop">&#8593;</button>
+
+    <script>
+        let scrollToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            showScrollButton();
+        };
+
+        function showScrollButton() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script>
+        function validateForm() {
+            var validName = document.getElementById("name");
+            var validEmail = document.getElementById("email");
+            var validPhone = document.getElementById("phone");
+            var validEnquiry = document.getElementById("enquiry");
+            var validDetails = document.getElementById("details");
+            var isValid = true;
+
+            if (validName.value == "Enter your name" || validName.value == "") {
+                alert("Please enter your name.");
+                isValid = false;
+            }
+
+            if (!validEmail.value.includes("@") && !validEmail.value.includes(".")) {
+                alert("Please enter a valid email address");
+                isValid = false;
+            }
+
+            if (validPhone.value == "Enter your phone number" || validPhone.value == "") {
+                alert("Please enter your phone number.");
+                isValid = false;
+            }
+
+            if (validEnquiry.value == "0") {
+                alert("Please select an enquiry option.");
+                isValid = false;
+            }
+
+            if (validDetails.value == "") {
+                alert("Please enter a message.");
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully! Thank you.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

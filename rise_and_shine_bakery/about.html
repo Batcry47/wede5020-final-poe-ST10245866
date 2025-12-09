@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rise & Shine Bakery is a family-owned bakery passionate about crafting delicious baked goods using locally sourced, high-quality ingredients. Visit us for a taste of our family's history and a delightful experience.">
+    <meta name="keywords"
+        content="Rise & Shine Bakery, baked goods, bakery, family recipes, high-quality ingredients, locally sourced, craftsmanship, delicious, sweet tooth">
+    <title>Rise &amp; Shine Bakery - About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="_images\page\logo.jpg" alt="Rise &amp; Shine Bakery Logo" width="150" height="150">
+        <nav id="topnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><span>About Us</span></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About Us</h1>
+
+        <div>
+            <p>At Rise &amp; Shine Bakery, baking is not just a job, it's a passion that's been passed down through
+                generations. Our founder grew up watching his mother bake breads and pastries in their family kitchen.
+                The
+                love and joy that went into each treat inspired our founder to carry on the tradition and start his own
+                bakery.</p>
+        </div>
+
+        <div>
+            <p>Today, Rise &amp; Shine Bakery is a thriving business that is loved by the community. We continue to
+                honour
+                our founder's legacy by using the same family recipes and techniques that have been passed down for
+                generations. When you visit Rise &amp; Shine Bakery, you're not just getting delicious baked goods
+                &ndash;
+                you're getting a taste of our family's history and passion for baking.</p>
+        </div>
+
+        <div>
+            <p>We believe that baking is an art. Our approach to baking is centered around the idea that the best
+                ingredients and techniques produce the best results. That's why we're committed to using locally
+                sourced,
+                high-quality ingredients in all of our baked goods. We believe in reducing food waste by carefully
+                planning
+                and measuring ingredients to ensure that we use only what we need. We also donate any leftover baked
+                goods
+                to local charities and food banks whenever possible.</p>
+        </div>
+
+        <div>
+            <p>In addition to using the best ingredients, we also prioritize craftsmanship and attention to detail.
+                Every
+                product is made with care and precision, ensuring that each item is of the highest quality. We're
+                constantly experimenting with new techniques and flavor combinations to keep our offerings fresh and
+                exciting for our customers.</p>
+        </div>
+
+        <div>
+            <p>At Rise &amp; Shine Bakery, we're not just baking goods - we're crafting experiences. We believe that
+                every
+                bite should be a moment of joy and pleasure, and we're dedicated to making that a reality for our
+                customers. We welcome you to Rise &amp; Shine Bakery, where we create delicious and beautifully crafted
+                baked goods that are sure to satisfy your sweet tooth.</p>
+        </div>
+
+        <div class="about">
+            <video src="_videos\about_us.mp4" controls width="750" height="450" poster="_images\page\about_us.jpg"
+                preload=”auto”></video>
+        </div>
+    </main>
+
+    <footer>
+        <nav id="bottomnav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><span>About Us</span></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <span>
+            &copy; 2023 Rise &amp; Shine Bakery. All rights reserved.
+        </span>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTop">&#8593;</button>
+
+    <script>
+        let scrollToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            showScrollButton();
+        };
+
+        function showScrollButton() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>

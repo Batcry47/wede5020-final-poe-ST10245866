@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to Rise &amp; Shine Bakery. We are passionate about baking delicious treats for all occasions. Visit us for the finest ingredients and exceptional service.">
+    <meta name="keywords"
+        content="Rise &amp; Shine Bakery, bakery, treats, pastries, baked goods, quality ingredients, exceptional service">
+    <title>Rise &amp; Shine Bakery - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="_images\page\logo.jpg" alt="Rise &amp; Shine Bakery Logo" width="150" height="150">
+        <nav id="topnav">
+            <ul>
+                <li class="active"><span>Home</span></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <h2>Welcome to Rise &amp; Shine Bakery</h2>
+
+        <div>
+            <h3>What We Do?</h3>
+            <p>We are passionate about baking delicious treats for all occasions. Our bakery uses only the finest
+                ingredients to ensure that every bite is pure heaven. From classic pastries to creative new flavors,
+                we're constantly dreaming up new recipes to delight your taste buds.</p>
+            <img src="_images\page\bakery_storefront.jpg" alt="Bakery Storefront" width="450" height="450">
+        </div>
+
+        <div>
+            <h3>Our Mission</h3>
+            <p>At Rise &amp; Shine Bakery, our mission is to create a warm and welcoming environment where every
+                customer
+                feels like family. We believe that baking is an art form and that every treat should be made with love
+                and care. Whether you're picking up a dozen donuts for the office or ordering a custom birthday cake,
+                we're committed to providing exceptional service and products that exceed your expectations.</p>
+            <img src="_images\page\our_mission.jpg" alt="Our Mission" width="450" height="450">
+        </div>
+
+        <div>
+            <h3>Our Values</h3>
+            <p>Our values are rooted in the community that we serve. We believe in giving back by supporting local
+                organizations and charities, reducing our environmental impact through sustainable practices, and
+                treating our employees like family. When you visit Rise &amp; Shine Bakery, you're not just supporting
+                us - you're becoming a part of our family.</p>
+            <img src="_images\page\our_values.jpg" alt="Our Values" width="450" height="450">
+        </div>
+
+        <div>
+            <h3>Quality Ingredients</h3>
+            <p>At Rise &amp; Shine Bakery, we only use the freshest and highest quality ingredients in our baked goods.
+                We source our ingredients locally whenever possible, partnering with local farmers and suppliers to
+                ensure
+                that our treats are bursting with flavor. We're committed to transparency in our ingredients and baking
+                practices, using organic and natural ingredients whenever possible. Our dedication to using the best
+                ingredients is just one of the many reasons why our customers keep coming back for more.</p>
+            <img src="_images\page\quality_ingredients.jpg" alt="Quality Ingredients" width="450" height="450">
+        </div>
+
+        <div>
+            <h3>Come Visit Us</h3>
+            <p>Whether you're stopping by for a quick coffee and croissant or placing a custom order for a special
+                occasion, we're here to make your day a little sweeter. Come see us today and discover why Rise &amp;
+                Shine Bakery is the go-to spot for baked goods.</p>
+            <img src="_images\page\visit_us.jpg" alt="Visit Us" width="450" height="450">
+        </div>
+
+        <div class="newsletter">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeUsMgMQK5I_ihP_RT8L7_9_lMZWkkDwQSpt8gzFgxAMX8fHg/viewform?embedded=true"
+                width="662" height="662" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </main>
+
+    <footer>
+        <nav id="bottomnav">
+            <ul>
+                <li class="active"><span>Home</span></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <span>
+            &copy; 2023 Rise &amp; Shine Bakery. All rights reserved.
+        </span>
+    </footer>
+
+    <button onclick="scrollToTop()" id="backToTop">&#8593;</button>
+
+    <script>
+        let scrollToTopButton = document.getElementById("backToTop");
+
+        window.onscroll = function () {
+            showScrollButton();
+        };
+
+        function showScrollButton() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
